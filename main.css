@@ -1,0 +1,256 @@
+main{
+  padding: 50px 80px;
+}
+
+main .recipe_main_topic{
+  display: flex;
+  justify-content: space-around;
+  height: 450px;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.155);
+}
+
+.recipe_main_topic .title{
+  font-family: 'Noto Sans Display', sans-serif;
+  font-size: 25px;
+  line-height: 50px;
+  margin-bottom: 0;
+  margin-right: 30px;
+}
+
+.recipe_main_topic .title span{
+  font-weight: bold;
+  line-height: 65px;
+  font-size: 30px;
+}
+
+main img{
+  width: 550px;
+  border-radius: 3px;
+  filter: drop-shadow(0px 10px 20px rgba(0, 0, 0, 0.082));
+}
+
+.main_topic.lower_content{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 15px;
+  margin-top: 40px;
+}
+
+.most_popular_chefs.chef-1,
+.most_popular_chefs.chef-2,
+.most_popular_chefs.chef-3,
+.most_popular_chefs.chef-4{
+  padding: 0px 29px;
+  width: 100%;
+  margin-top: 20px;
+}
+
+.most_popular_chefs.chef-1 .about_chef,
+.most_popular_chefs.chef-2 .about_chef,
+.most_popular_chefs.chef-3 .about_chef,
+.most_popular_chefs.chef-4 .about_chef{
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  
+}
+
+.most_popular_chefs.chef-1 .about_chef img,
+.most_popular_chefs.chef-2 .about_chef img,
+.most_popular_chefs.chef-3 .about_chef img,
+.most_popular_chefs.chef-4 .about_chef img{
+  width: 290px;
+  filter: drop-shadow(0px 10px 30px rgba(0, 0, 0, 0.116));
+}
+
+.about_chef span{
+  font-family:sans-serif;
+  font-style: normal;
+  font-weight: 600;
+  color: black;
+}
+
+.about_chef .first_topic{
+  margin-bottom: 0;
+  margin-right: 10px;
+  line-height: 37px;
+  color: rgba(0, 0, 0, 0.63);
+  font-family: "DM Serif Display", serif;
+  font-weight: 400;
+  font-style: italic;
+  min-width: 300px;
+  max-width: 735px;
+}
+
+.second_topic{
+  line-height: 28px;
+  color: rgba(0 0 0 / 72%);
+  font-family: "DM Serif Display", serif;
+  font-weight: 400;
+  font-style: italic;
+  font-size: 14px;
+  margin-left: 70px;
+  max-width:950px ;
+  min-width:300px ;
+}
+
+
+.chef-2 .second_topic{
+  margin-top: 20px;
+}
+
+.chef-3 .second_topic{
+  margin-top: 20px;
+}
+
+.chef-3 .about_chef img{
+  height: 260px;
+  filter: drop-shadow(0px 10px 30px rgba(0, 0, 0, 0.116));
+}
+
+.chef-4 .second_topic{
+  margin-top: 20px;
+}
+
+.fancy_food_section{
+  margin-top: 80px;
+}
+
+.fancy_food_section .dishes{
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  flex-wrap: wrap;
+  margin-top: 40px;
+  gap:15px ;
+}
+
+.fancy_food_section h1{
+  font-family: "Dancing Script", cursive;
+  text-align: center;
+  font-size: 31px;
+}
+
+.wrap{
+  border: 1px solid rgba(0, 0, 0, 0.201);
+  border-radius: 7px;
+  width: 430px;
+  height: 250px;
+  position: relative;
+  box-shadow: 0px 10px 40px rgba(0, 0, 0, 0.088);
+}
+
+.wrap .name{
+  font-family: "Dancing Script", cursive;
+  font-size: 22px;
+}
+
+.wrap .about{
+  line-height: 27px;
+  font-family: 'Noto Sans Display', sans-serif;
+  font-size: 15px;
+}
+
+.wrap .description{
+  padding: 30px 10px 0px 10px;
+  text-align: center;
+}
+
+.rate i{
+  color: rgba(255, 255, 32, 0.847);
+}
+
+@media (max-width:1160px){
+  main img{
+    width: 500px;
+  }
+  main .recipe_main_topic .title{
+    font-size: 20px;
+    margin-top: 0;
+    margin-bottom: 30px;
+  }
+  .fancy_food_section .wrap{
+    width:400px ;
+  }
+  .about_chef .first_topic,
+  .about_chef .second_topic{
+    font-size: 14px;
+  }
+}
+
+@media (max-width:925px){
+  main{
+    padding: 20px 30px;
+  }
+  main img{
+    width: 530px;
+  }
+  main .recipe_main_topic{
+    height: 650px;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+  .fancy_food_section .wrap{
+    width: 500px;
+  }
+}
+
+@media (max-width:710px){
+  body::-webkit-scrollbar{
+    width: 0px;
+  }
+  body::-webkit-scrollbar-thumb{
+    background-color: transparent;
+    border-radius: 2px;
+  }
+  main .recipe_main_topic{
+    height: 730px;
+  }
+  .main_topic.lower_content .about_chef{
+    flex-direction: column;
+  }
+  main .recipe_main_topic .title{
+    text-align: center;
+  }
+  main img{
+    width: 390px;
+  }
+  .about_chef{
+    flex-direction: column;
+  }
+  .about_chef img{
+    margin-top: 15px;
+  }
+  .second_topic{
+    margin-left: 0px;
+  }
+  .chef-3 .about_chef img{
+    height: 250px;
+  }
+}
+
+@media (max-width:380px){
+  main .recipe_main_topic{
+    height: 780px;
+  }
+  main .main_topic.lower_content{
+    margin-top: 0px;
+  }
+  main img{
+    width: 350px;
+  }
+  .chef-3 .about_chef img{
+    width: px;
+  }
+}
+
+
+::-webkit-scrollbar{
+  width: 11px;
+}
+::-webkit-scrollbar-thumb{
+  background-color: rgba(0, 0, 0, 0.266);
+  border-radius: 2px;
+}
