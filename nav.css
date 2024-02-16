@@ -1,0 +1,218 @@
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+Display:ital@1&display=swap');
+
+body{
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+
+li{
+  list-style: none;
+}
+
+.information_nav a ,
+.website_navigation a{
+  text-decoration: none;
+  color: rgba(0, 0, 0, 0.848);
+  position: relative;
+  transition: .3s ease-in-out;
+}
+
+/* header --- nav -------------- */
+
+header{
+  padding: 0px 30px;
+  height: 65px;
+  font-family: 'Noto Sans Display', sans-serif;
+  position: sticky;
+  top: 0;
+  right: 0;
+  left: 0;
+  z-index: 5;
+  border-bottom: 2px solid rgba(0, 0, 0, 0.052);
+  box-shadow: 0px 40px 20px rgba(0, 0, 0, 0.032);
+  background-color: white;
+}
+
+header nav{
+  display: flex;
+  align-items: center;
+}
+
+.information_nav a::after,
+.website_navigation a::after{
+  content: "";
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%,-50%);
+  width: 10px;
+  height: 10px;
+  background-color: black;
+  border-top-left-radius: 50%;
+  border-bottom-left-radius: 50%;
+  border-top-right-radius: 50%;
+  z-index: -1;
+  opacity: 0;
+  transition: .3s ease-in-out;
+}
+
+.information_nav a:hover::after,
+.website_navigation a:hover::after{
+  opacity: 1;
+  width: 55px;
+  height: 30px;
+}
+
+.information_nav a:hover,
+.website_navigation a:hover{
+  color: white;
+}
+
+.information_nav li a[title="location"]:hover::after{
+  width: 65px;
+  height: 40px;
+}
+
+.website_navigation li a[title="community"]:hover::after{
+  width: 84px;
+  height: 40px;
+}
+
+.website_navigation li a[title="advertise"]:hover::after{
+  width: 70px;
+  height: 40px;
+}
+
+.information_nav li a[title="food news"]:hover::after{
+  width: 80px;
+  height: 40px;
+}
+
+
+/* first_nav ------------- */
+nav .first_nav {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+  align-items: center;
+}
+
+header nav .first_nav .nav_logo img{
+  width: 120px;
+  margin-top: 8px;
+}
+
+nav .first_nav .information_nav{
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 540px;
+}
+
+nav .first_nav .search_input{
+  margin-left: 20px;
+}
+
+.search_input input{
+  border: none;
+  outline: none;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.264);
+}
+
+/* second_nav ---------------- */
+
+nav .second_nav{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  margin-left: 30px;
+}
+
+nav .second_nav .website_navigation{
+  display: flex;
+  width: 500px;
+  justify-content: space-between;
+}
+
+.bttns .log_in{
+  border: 3px solid rgba(0, 0, 0, 0.49);
+  border-radius: 4px;
+  padding: 6px 15px 6px 15px;
+  background-color: transparent;
+  transition: .3s ease-in;
+}
+
+.bttns i{
+  opacity: 0;
+}
+
+.bttns .log_in:hover{
+  transform: translatey(-3px);
+  filter: drop-shadow(0px 10px 10px black);
+}
+
+@media (max-width:1420px){
+  ul li a{
+    font-size: 15px;
+  }
+  nav .first_nav .information_nav{
+    width: 490px;
+    padding-left: 20px;
+  }
+  nav .second_nav .website_navigation{
+    width: 420px;
+    padding-left: 0px;
+  }
+  nav .second_nav .bttns{
+    flex: 1;
+    justify-content: center;
+    display: flex;
+  }
+}
+
+@media (max-width:1260px){
+  nav .first_nav .information_nav{
+    width: 470px;
+  }
+  nav .second_nav .website_navigation{
+    width: 400px;
+  }
+}
+
+@media (max-width:1181px){
+  header nav .first_nav .nav_logo img{
+    width: 150px;
+    margin-top: 2px;
+  }
+  nav .first_nav .information_nav{
+    display: none;
+  }
+  nav .second_nav .website_navigation{
+    display: none;
+  }
+  nav .first_nav .search_input input{
+    display: none;
+  }
+  nav .second_nav .website_navigation{
+    width: 340px;
+  }
+  nav .second_nav .bttns i{
+    opacity: 1;
+    font-size: 20px;
+  }
+  nav .second_nav .bttns .log_in{
+    display: none;
+  }
+  nav .second_nav .bttns{
+    justify-content: flex-end;
+  }
+  nav .first_nav{
+    justify-content: center;
+  }
+  nav .second_nav{
+    width: 5%;
+    margin-left: 0;
+  }
+}
