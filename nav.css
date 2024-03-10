@@ -26,7 +26,6 @@ header{
   font-family: 'Noto Sans Display', sans-serif;
   position: sticky;
   top: 0;
-  right: 0;
   left: 0;
   z-index: 5;
   border-bottom: 2px solid rgba(0, 0, 0, 0.052);
